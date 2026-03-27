@@ -1,0 +1,113 @@
+<svg viewBox="0 0 400 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="200" cy="210" r="185" fill="#f3f3f3"/>
+  
+  <!-- Sparkle dots -->
+  <circle cx="55" cy="80" r="5" fill="#ff5f1f" opacity="0.5"/>
+  <circle cx="350" cy="100" r="4" fill="#ab3600" opacity="0.4"/>
+  <circle cx="40" cy="300" r="3" fill="#ff5f1f" opacity="0.3"/>
+  <circle cx="365" cy="280" r="5" fill="#ab3600" opacity="0.3"/>
+  <circle cx="320" cy="60" r="3" fill="#ff5f1f" opacity="0.4"/>
+
+  <!-- Body / White sweater -->
+  <path d="M120 340 C120 300 145 280 165 270 L200 260 L235 270 C255 280 280 300 280 340 L280 450 L120 450 Z" fill="#f5f0eb"/>
+  <!-- Sweater neckline -->
+  <path d="M165 270 C175 280 190 288 200 290 C210 288 225 280 235 270" stroke="#e8e0d8" stroke-width="2" fill="none"/>
+  <!-- Sweater texture lines -->
+  <line x1="155" y1="310" x2="155" y2="380" stroke="#ede5dd" stroke-width="1" opacity="0.6"/>
+  <line x1="175" y1="300" x2="175" y2="390" stroke="#ede5dd" stroke-width="1" opacity="0.6"/>
+  <line x1="200" y1="295" x2="200" y2="400" stroke="#ede5dd" stroke-width="1" opacity="0.6"/>
+  <line x1="225" y1="300" x2="225" y2="390" stroke="#ede5dd" stroke-width="1" opacity="0.6"/>
+  <line x1="245" y1="310" x2="245" y2="380" stroke="#ede5dd" stroke-width="1" opacity="0.6"/>
+
+  <!-- Crossed arms -->
+  <!-- Right arm (crossing over) -->
+  <path d="M255 310 C240 330 210 340 180 335 C170 333 160 328 155 320" fill="#f5f0eb" stroke="#e8e0d8" stroke-width="1.5"/>
+  <!-- Left arm (crossing under) -->
+  <path d="M145 310 C160 330 185 342 215 338 C228 335 240 328 248 318" fill="#f5f0eb" stroke="#e8e0d8" stroke-width="1.5"/>
+  <!-- Hands -->
+  <ellipse cx="155" cy="318" rx="14" ry="10" fill="#c68642" transform="rotate(-10 155 318)"/>
+  <ellipse cx="248" cy="316" rx="14" ry="10" fill="#c68642" transform="rotate(10 248 316)"/>
+
+  <!-- Neck -->
+  <rect x="185" y="240" width="30" height="30" rx="5" fill="#c68642"/>
+
+  <!-- Head / Face shape -->
+  <ellipse cx="200" cy="170" rx="72" ry="82" fill="#c68642"/>
+
+  <!-- Hijab - back layer -->
+  <path d="M115 180 C115 100 150 55 200 50 C250 55 285 100 285 180 C285 220 275 250 265 270 L200 290 L135 270 C125 250 115 220 115 180Z" fill="#2c3e6b"/>
+  
+  <!-- Face cutout -->
+  <ellipse cx="200" cy="178" rx="58" ry="65" fill="#c68642"/>
+
+  <!-- Hijab - front drape left -->
+  <path d="M142 178 C140 200 138 230 135 270 C132 290 128 320 125 340 L110 340 C112 300 115 260 118 230 C120 200 125 175 130 160 C135 148 140 145 148 150 C142 158 140 168 142 178Z" fill="#2c3e6b"/>
+  
+  <!-- Hijab - front drape right -->
+  <path d="M258 178 C260 200 262 230 265 270 C268 290 272 320 275 340 L290 340 C288 300 285 260 282 230 C280 200 275 175 270 160 C265 148 260 145 252 150 C258 158 260 168 258 178Z" fill="#2c3e6b"/>
+
+  <!-- Hijab - top fold detail -->
+  <path d="M148 150 C160 120 178 100 200 95 C222 100 240 120 252 150" stroke="#243358" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- Forehead shadow under hijab -->
+  <path d="M148 155 C160 140 178 132 200 130 C222 132 240 140 252 155" stroke="#b5763a" stroke-width="1" fill="none" opacity="0.2"/>
+
+  <!-- Eyes -->
+  <!-- Left eye -->
+  <ellipse cx="178" cy="178" rx="10" ry="11" fill="white"/>
+  <circle cx="180" cy="178" r="6" fill="#2c1810"/>
+  <circle cx="182" cy="176" r="2.5" fill="white"/>
+  <!-- Right eye -->
+  <ellipse cx="222" cy="178" rx="10" ry="11" fill="white"/>
+  <circle cx="220" cy="178" r="6" fill="#2c1810"/>
+  <circle cx="222" cy="176" r="2.5" fill="white"/>
+  
+  <!-- Eyebrows -->
+  <path d="M165 164 C170 160 178 159 188 162" stroke="#2c1810" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M212 162 C222 159 230 160 235 164" stroke="#2c1810" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Nose -->
+  <path d="M198 188 C196 194 194 198 197 200 C199 201 203 201 205 199 C207 197 204 192 202 188" stroke="#b5763a" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+  <!-- Big warm smile -->
+  <path d="M175 210 C180 224 190 230 200 230 C210 230 220 224 225 210" stroke="#2c1810" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Smile fill (teeth hint) -->
+  <path d="M178 212 C183 224 192 228 200 228 C208 228 217 224 222 212" fill="white" opacity="0.9"/>
+  <!-- Lower lip -->
+  <path d="M182 218 C190 228 210 228 218 218" stroke="#a0522d" stroke-width="1" fill="none" opacity="0.3"/>
+
+  <!-- Cheek blush -->
+  <ellipse cx="162" cy="205" rx="12" ry="7" fill="#e8946a" opacity="0.25"/>
+  <ellipse cx="238" cy="205" rx="12" ry="7" fill="#e8946a" opacity="0.25"/>
+
+  <!-- Floating product icons around avatar -->
+  
+  <!-- Small phone icon -->
+  <g transform="translate(320, 170)">
+    <rect x="0" y="0" width="32" height="50" rx="6" fill="white" stroke="#e2e2e2" stroke-width="1.5"/>
+    <rect x="5" y="8" width="22" height="4" rx="2" fill="#e8e8e8"/>
+    <rect x="5" y="15" width="22" height="16" rx="3" fill="#fff0e6"/>
+    <rect x="5" y="35" width="14" height="4" rx="2" fill="#ab3600" opacity="0.5"/>
+  </g>
+
+  <!-- Small chart icon -->
+  <g transform="translate(50, 140)">
+    <rect x="0" y="0" width="42" height="32" rx="6" fill="white" stroke="#e2e2e2" stroke-width="1.5"/>
+    <rect x="6" y="18" width="5" height="8" rx="1" fill="#e8e8e8"/>
+    <rect x="14" y="12" width="5" height="14" rx="1" fill="#ff5f1f" opacity="0.6"/>
+    <rect x="22" y="15" width="5" height="11" rx="1" fill="#e8e8e8"/>
+    <rect x="30" y="8" width="5" height="18" rx="1" fill="#ab3600"/>
+  </g>
+
+  <!-- Checkmark bubble -->
+  <g transform="translate(330, 300)">
+    <circle cx="16" cy="16" r="16" fill="#e8f5e9"/>
+    <path d="M10 16 L14 20 L22 12" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Lightning bolt (product energy!) -->
+  <g transform="translate(60, 60)">
+    <path d="M18 0 L8 14 L15 14 L12 26 L24 10 L16 10 Z" fill="#ff5f1f" opacity="0.6"/>
+  </g>
+</svg>

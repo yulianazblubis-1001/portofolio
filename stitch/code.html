@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | Alex Rivera - Senior Product Manager</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#ffffff",
+              "on-background": "#1a1c1c",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#474746",
+              "on-secondary-fixed": "#1c1b1b",
+              "on-primary-fixed": "#390c00",
+              "tertiary-fixed-dim": "#ffba20",
+              "surface-container-low": "#f3f3f3",
+              "outline-variant": "#e3bfb3",
+              "on-surface": "#1a1c1c",
+              "surface-dim": "#dadada",
+              "on-primary-fixed-variant": "#832700",
+              "on-tertiary-fixed-variant": "#5e4200",
+              "secondary-fixed-dim": "#c8c6c5",
+              "primary-fixed-dim": "#ffb59c",
+              "error-container": "#ffdad6",
+              "on-tertiary-container": "#3d2900",
+              "surface-variant": "#e2e2e2",
+              "surface": "#f9f9f9",
+              "outline": "#8f7066",
+              "on-primary-container": "#561700",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#271900",
+              "surface-container-high": "#e8e8e8",
+              "primary-container": "#ff5f1f",
+              "on-surface-variant": "#5b4138",
+              "primary-fixed": "#ffdbcf",
+              "secondary-container": "#e2dfde",
+              "surface-bright": "#f9f9f9",
+              "inverse-on-surface": "#f1f1f1",
+              "tertiary-container": "#c18a00",
+              "primary": "#ab3600",
+              "surface-container-highest": "#e2e2e2",
+              "on-secondary": "#ffffff",
+              "tertiary": "#7c5800",
+              "tertiary-fixed": "#ffdea8",
+              "surface-tint": "#ab3600",
+              "background": "#f9f9f9",
+              "inverse-surface": "#2f3131",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#ffb59c",
+              "secondary-fixed": "#e5e2e1",
+              "secondary": "#5f5e5e",
+              "on-secondary-container": "#636262",
+              "surface-container": "#eeeeee"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 20px 40px rgba(171, 54, 0, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-zinc-900 dark:text-zinc-50 font-headline uppercase">ALEX RIVERA</div>
+<div class="hidden md:flex items-center gap-8 font-headline text-sm font-bold tracking-tight">
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-500 transition-colors" href="#">Home</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-500 transition-colors" href="#">Work</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-500 transition-colors" href="#">About</a>
+<a class="text-orange-600 dark:text-orange-500 border-b-2 border-orange-600 pb-1" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-headline text-sm font-bold tracking-tight hover:scale-105 transition-all duration-300 kinetic-hover">
+                Let's Chat
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-8 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-16 max-w-3xl">
+<span class="inline-block px-4 py-1.5 rounded-full bg-surface-container-high text-primary font-label text-xs font-bold tracking-widest uppercase mb-6">Connect</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-[1.1]">
+                Let's build <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">something meaningful</span> together.
+            </h1>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Contact Form Section -->
+<section class="lg:col-span-7 bg-surface-container-low rounded-xl p-8 md:p-12">
+<form action="#" class="space-y-8" method="POST">
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="name">Name</label>
+<input class="w-full bg-surface-container-lowest border-0 rounded-xl px-5 py-4 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary transition-all duration-200" id="name" name="name" placeholder="Your name" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="email">Email</label>
+<input class="w-full bg-surface-container-lowest border-0 rounded-xl px-5 py-4 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary transition-all duration-200" id="email" name="email" placeholder="you@company.com" required="" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="message">Message</label>
+<textarea class="w-full bg-surface-container-lowest border-0 rounded-xl px-5 py-4 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary transition-all duration-200" id="message" name="message" placeholder="Tell me about your vision..." required="" rows="5"></textarea>
+</div>
+<button class="w-full md:w-auto bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-4 rounded-xl font-headline text-lg font-bold tracking-tight hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-3 kinetic-hover" type="submit">
+                        Send Inquiry
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+</section>
+<!-- Sidebar Info -->
+<aside class="lg:col-span-5 space-y-12">
+<!-- Social Links -->
+<div class="space-y-6">
+<h3 class="font-headline text-xl font-bold tracking-tight">Ecosystem</h3>
+<div class="flex flex-col gap-4">
+<a class="group flex items-center justify-between p-5 rounded-xl bg-surface-container transition-all hover:bg-surface-container-high transition-colors duration-200" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="alternate_email">alternate_email</span>
+<span class="font-label font-medium text-on-surface">LinkedIn</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary group-hover:translate-x-1 transition-all" data-icon="north_east">north_east</span>
+</a>
+<a class="group flex items-center justify-between p-5 rounded-xl bg-surface-container transition-all hover:bg-surface-container-high transition-colors duration-200" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="chat">chat</span>
+<span class="font-label font-medium text-on-surface">Twitter</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary group-hover:translate-x-1 transition-all" data-icon="north_east">north_east</span>
+</a>
+<a class="group flex items-center justify-between p-5 rounded-xl bg-surface-container transition-all hover:bg-surface-container-high transition-colors duration-200" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="menu_book">menu_book</span>
+<span class="font-label font-medium text-on-surface">Medium</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary group-hover:translate-x-1 transition-all" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+<!-- Location Map Mockup -->
+<div class="space-y-6">
+<h3 class="font-headline text-xl font-bold tracking-tight">Home Base</h3>
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low h-64 group">
+<div class="absolute inset-0 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
+<img class="w-full h-full object-cover" data-alt="Modern urban landscape of San Francisco with Golden Gate bridge in soft afternoon light and clean minimalist city vibes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLknUYVaOvqN-vIdKk0jxMaBGNV4nTsCFATixWCoFbzKVFTNInBcBunNqE4FP9LkInd32gWX3EeExa_SFBMb1Vn4RW4gw0agasOjYBrV2GtiTATgtc15pcj9WZXo8LYKrLDVW1acRw7sxYdbIma9bPxSj_r1Oryiaz8OIwnN-_YztOogvzvT5Wdz1M3F974QLwqW7xk9OeCCnrhHFTLm3RfpvGW2rlfvFO3HbHK69NpIvFjZZHJirubUS0V-tz4ISpnBpvbsiCi2s"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary fill-1" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div>
+<p class="font-label text-xs font-bold uppercase tracking-wider text-primary">Current Location</p>
+<p class="font-headline font-bold text-on-surface">Based in San Francisco</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Availability Badge -->
+<div class="p-8 rounded-xl bg-primary/5 border border-primary/10 flex items-start gap-4">
+<div class="w-3 h-3 rounded-full bg-green-500 mt-1.5 relative">
+<span class="absolute inset-0 w-3 h-3 rounded-full bg-green-500 animate-ping opacity-75"></span>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Available for advisory</p>
+<p class="text-sm text-on-surface-variant leading-relaxed mt-1">Currently taking on Q3 partnerships and strategy consulting for early-stage startups.</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 mt-20 bg-zinc-50 dark:bg-zinc-900/50">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 max-w-7xl mx-auto gap-6">
+<div class="text-lg font-bold text-zinc-900 dark:text-zinc-100 font-headline">ALEX RIVERA</div>
+<p class="font-body text-sm font-medium tracking-wide text-zinc-500 dark:text-zinc-400">© 2024 Built with kinetic energy by Alex.</p>
+<div class="flex gap-8 font-body text-sm font-medium tracking-wide">
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-orange-500 transition-colors duration-200" href="#">LinkedIn</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-orange-500 transition-colors duration-200" href="#">Twitter</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-orange-500 transition-colors duration-200" href="#">Medium</a>
+</div>
+</div>
+</footer>
+</body></html>

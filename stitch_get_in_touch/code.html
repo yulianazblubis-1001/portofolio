@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CURATOR | Product Management Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#904d00",
+              "on-secondary-fixed": "#2f1500",
+              "surface-container": "#efecff",
+              "on-primary-fixed": "#3f001a",
+              "primary-container": "#e11170",
+              "on-secondary-fixed-variant": "#6e3900",
+              "tertiary-fixed": "#d9e2ff",
+              "inverse-surface": "#2f2f41",
+              "on-primary": "#ffffff",
+              "surface-dim": "#dad8f0",
+              "surface-container-highest": "#e2e0f8",
+              "surface-container-low": "#f5f2ff",
+              "tertiary-fixed-dim": "#afc6ff",
+              "on-error-container": "#93000a",
+              "primary-fixed-dim": "#ffb1c4",
+              "surface-container-lowest": "#ffffff",
+              "inverse-primary": "#ffb1c4",
+              "tertiary-container": "#4872c8",
+              "on-tertiary": "#ffffff",
+              "outline": "#8f6f76",
+              "on-surface": "#1a1a2b",
+              "on-tertiary-container": "#fefcff",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f2efff",
+              "secondary-fixed-dim": "#ffb77d",
+              "on-secondary": "#ffffff",
+              "primary": "#b60058",
+              "on-primary-container": "#fffbff",
+              "surface-bright": "#fcf8ff",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#001944",
+              "secondary-container": "#fd8b00",
+              "on-surface-variant": "#5b3f46",
+              "on-secondary-container": "#603100",
+              "surface": "#fcf8ff",
+              "background": "#fcf8ff",
+              "secondary-fixed": "#ffdcc3",
+              "outline-variant": "#e3bdc5",
+              "primary-fixed": "#ffd9e0",
+              "on-primary-fixed-variant": "#8f0044",
+              "on-tertiary-fixed-variant": "#074397",
+              "surface-container-high": "#e8e6fe",
+              "error": "#ba1a1a",
+              "tertiary": "#2b59ad",
+              "surface-tint": "#bb005a",
+              "on-background": "#1a1a2b",
+              "surface-variant": "#e2e0f8"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Inter"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .editorial-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1.5rem;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed-variant">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf8ff]/80 dark:bg-[#1a1a2b]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(26,26,43,0.04)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#1a1a2b] dark:text-[#fcf8ff] font-headline uppercase">
+                CURATOR
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-headline tracking-tighter uppercase font-bold text-sm text-[#b60058] dark:text-[#e11170] border-b-2 border-[#b60058] pb-1 transition-all duration-300" href="#">Products</a>
+<a class="font-headline tracking-tighter uppercase font-bold text-sm text-[#1a1a2b] dark:text-[#e2e0f8] hover:text-[#b60058] transition-colors transition-all duration-300" href="#">Strategy</a>
+<a class="font-headline tracking-tighter uppercase font-bold text-sm text-[#1a1a2b] dark:text-[#e2e0f8] hover:text-[#b60058] transition-colors transition-all duration-300" href="#">About</a>
+<a class="font-headline tracking-tighter uppercase font-bold text-sm text-[#1a1a2b] dark:text-[#e2e0f8] hover:text-[#b60058] transition-colors transition-all duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline tracking-tighter uppercase font-bold text-sm hover:opacity-80 active:scale-95 transition-all duration-300">
+                Let's Build
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+<!-- Hero Section: Editorial & Asymmetric -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-32">
+<div class="lg:col-span-8">
+<span class="font-label text-primary font-bold tracking-widest uppercase text-xs mb-6 block">Product Strategy &amp; Growth</span>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-on-surface mb-8">
+                    Shipping <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container italic">impactful products.</span>
+</h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-xl leading-relaxed">
+                    A data-driven approach to scaling digital solutions, blending user-centric growth with high-velocity shipping for ambitious teams.
+                </p>
+</div>
+<div class="lg:col-span-4 relative group">
+<div class="absolute inset-0 bg-secondary-container rounded-3xl translate-x-4 translate-y-4 -z-10 transition-transform group-hover:translate-x-6 group-hover:translate-y-6"></div>
+<div class="aspect-[4/5] overflow-hidden rounded-3xl bg-surface-container-high shadow-xl">
+<img alt="Product Leader Portrait" class="w-full h-full object-cover" data-alt="professional portrait of a confident product manager in a modern tech office setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8zbpts_qCNOAqwWQES4-4vqTj8u69kmcv_y6S4lu2IC4kw_cjowrEtkRRMqvrHFr9qbTAWpY9H_hd9U4hpUoKhrxSt07_RHtfcFW3u_JGrpDmd_-0LfSS99iT00Qpqs8H04yjf_6C3PcQWVqDgCQo960q88YZhDfhxFudHNGK2LsJs3WTUm3CS0sWcLxflu2Z25Uzkj9KLx4VO4vdEAGNbdcEh9XH8NMrMotOp3Dod4Q6nd74scURkpNrJ47W7yUPogfyFZ_XCOE"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-2xl shadow-xl flex items-center gap-4 border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant" data-icon="query_stats">query_stats</span>
+</div>
+<div>
+<p class="font-headline font-bold text-sm tracking-tighter uppercase">Available for</p>
+<p class="font-body text-sm text-on-surface-variant">Strategy Consulting</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Brief Bio & Vibe Quote -->
+<section class="mb-32">
+<div class="editorial-grid">
+<div class="col-span-1 lg:col-span-4 hidden lg:block">
+<span class="block h-px w-full bg-outline-variant/20 mt-4"></span>
+</div>
+<div class="col-span-12 lg:col-span-8">
+<div class="relative pl-12">
+<span class="absolute left-0 top-0 text-8xl font-headline text-primary/10 leading-none">“</span>
+<blockquote class="font-headline text-3xl md:text-4xl font-bold tracking-tight text-on-surface leading-tight mb-8">
+                            Great products aren't just built—they are <span class="underline decoration-secondary-container decoration-4 underline-offset-4">prioritized</span>. I bridge the gap between complex data and intuitive user experiences to drive sustainable growth.
+                        </blockquote>
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<p class="font-body text-lg text-on-surface-variant leading-relaxed flex-1">
+                                After 8 years leading cross-functional teams at high-growth scale-ups, I've learned that impactful shipping requires both data-driven strategy and a deep empathy for the user. I help teams move from 'what if' to 'what's next' through rigorous validation and clear roadmaps.
+                            </p>
+<div class="flex flex-col gap-2">
+<span class="font-label font-bold text-xs uppercase tracking-widest text-primary">Shipping from</span>
+<span class="font-headline font-black text-xl tracking-tighter">SAN FRANCISCO, CA</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Work Bento Grid -->
+<section class="mb-32">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline text-4xl font-black tracking-tighter uppercase mb-2 text-on-surface">Products I've Shipped</h2>
+<p class="font-body text-on-surface-variant">A collection of marketplace, SaaS, and platform initiatives.</p>
+</div>
+<a class="font-headline font-bold text-sm tracking-tighter uppercase text-primary flex items-center gap-2 group hover:opacity-80 transition-all" href="#">
+                    View Case Studies 
+                    <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Feature -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative aspect-[16/9] overflow-hidden rounded-3xl bg-surface-container-low mb-4">
+<img alt="Data Dashboard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="modern analytics dashboard with colorful charts, graphs, and clean UI components" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASuUxOF3X4mD5qIZllQyc_Q91reZw70gFqGKmSR-5Kg1ngK98ak0t9BkWQi92e16DzE0FMUNLWE6wrNTTpeRNkU7741Ek-F6xGiPpbiszSxEhnWKIMz05Q9bTagyhLPrR_rcvhen1ZX8NxG-MPOhCQI2KiEyGnOIkbBHUQ1JhNBLGw40wY1hjqE6C9kPtwYYryHBvCL6EsGdTB-9sd7nhlLhlTtbuFHpbiOKXZeBLTZ24dXOcBndlONYAackyf8PzOZlwfER5Z66o"/>
+<div class="absolute top-6 left-6 flex gap-2">
+<span class="bg-white/90 glass-effect px-4 py-1.5 rounded-full font-label text-[10px] font-bold uppercase tracking-widest text-on-surface">Data Strategy</span>
+<span class="bg-white/90 glass-effect px-4 py-1.5 rounded-full font-label text-[10px] font-bold uppercase tracking-widest text-on-surface">2024</span>
+</div>
+</div>
+<h3 class="font-headline text-2xl font-bold tracking-tight">InsightEngine — Real-time Analytics Scale</h3>
+</div>
+<!-- Small Vertical -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-surface-container-low mb-4">
+<img alt="Product Roadmap" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="clean minimalist product roadmap visualization with colorful blocks and timeline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzf8rOeMRK5gnOEeoN6i60iIJrQzCgT75HhqNoUqPDxQkl8wHUqyAUKzC1e4FIyixIoMGuFzbCT0-3A4x4LKSJ4Qck5uV1w3KA0pp9Wq0eHCeOB-AQALFYWgIddbY4EouVsSUL9dw4Yy1D-3aRu4HzoVKjn9gAjGnLNShEKym9kEwL7UqN6eM6rGQuT8Ux2g5083aV3a5NTdXwGsbUynVM2AaZgcL7RJ76ierySUGEUvbwt3tlBe1rPKL6lEUtAehh9H225J3dltQ"/>
+<div class="absolute top-6 left-6 flex gap-2">
+<span class="bg-white/90 glass-effect px-4 py-1.5 rounded-full font-label text-[10px] font-bold uppercase tracking-widest text-on-surface">Growth</span>
+</div>
+</div>
+<h3 class="font-headline text-2xl font-bold tracking-tight">OnboardFlow</h3>
+</div>
+<!-- Row 2 Small -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-surface-container-low mb-4">
+<img alt="Team Collaboration" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="team collaborating around a whiteboard with colorful sticky notes in a bright office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVfzPnHn9hfjFhCv-oD5a_X_6WEdTq-iEIqbwHHEuEAk5L-gJYQmEfvI6UvPdD13nN8v9yNN2gbWHfw4jEN2j6K618Kygj5DTS7cMtxQ4mj3ooPrqOcqAtMuYeqH3bEVLIm-ImjabdljlSPx2c9ZBSxdobxgiKCwq9HF4XxdySXYrmkHu1EuiE36J777RVo8Pp3OksTwQ6NDdkCty3-8-VYa9DghZCRPcM6TYy47lDoHdtbGaPkBQDl1JGxKp8TvoIbZCjd63gE9Y"/>
+<div class="absolute top-6 left-6 flex gap-2">
+<span class="bg-white/90 glass-effect px-4 py-1.5 rounded-full font-label text-[10px] font-bold uppercase tracking-widest text-on-surface">Team Ops</span>
+</div>
+</div>
+<h3 class="font-headline text-2xl font-bold tracking-tight">Velocity Sprint System</h3>
+</div>
+<!-- Row 2 Medium -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative aspect-[16/9] overflow-hidden rounded-3xl bg-surface-container-low mb-4">
+<img alt="User Research" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="high-quality close up of digital wireframes on a tablet with user interview notes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt4urZsl0GctZBZDP-LQBjEHwcy1G_VYIY3w7_JeHihQMx0iAXIszlqj2zgxt3hHlNVoK_0XiKocLluMryOVqSOcqfiAYiuSq8auSFwvq63f1Mz8py1rZ6AgYyylzkTd5FOrQeyqovrsLllILaGzF5RXepAAMxiBbX_kx_fY7tyjZrfkYOpcc3ByBJ9a2YGgAqQAkVYvB7KAjcEWixPO9OB02PbbVwXpF90EogEJVC59i626zUk1CD_HHcDw4Nkeo7hdiU4MHu2M8"/>
+<div class="absolute top-6 left-6 flex gap-2">
+<span class="bg-white/90 glass-effect px-4 py-1.5 rounded-full font-label text-[10px] font-bold uppercase tracking-widest text-on-surface">Research</span>
+</div>
+</div>
+<h3 class="font-headline text-2xl font-bold tracking-tight">The User-Centric Pivot</h3>
+</div>
+</div>
+</section>
+<!-- Services / How I Help -->
+<section class="mb-32 bg-surface-container-low rounded-[40px] p-12 md:p-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline text-5xl font-black tracking-tighter uppercase mb-6 text-on-surface">How I drive impact.</h2>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed mb-8">
+                        I specialize in navigating the "messy middle" of product development—turning vague ideas into high-performing features.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-2xl font-headline font-bold tracking-tighter uppercase text-sm hover:scale-[1.02] transition-all">View Methodology</button>
+</div>
+</div>
+<div class="flex flex-col gap-12">
+<div class="group">
+<span class="font-label font-bold text-primary mb-2 block">01</span>
+<h4 class="font-headline text-3xl font-bold mb-4 group-hover:text-primary transition-colors">Data-Driven Strategy</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">Defining KPIs and success metrics that align business goals with user needs.</p>
+</div>
+<div class="group">
+<span class="font-label font-bold text-primary mb-2 block">02</span>
+<h4 class="font-headline text-3xl font-bold mb-4 group-hover:text-primary transition-colors">User-Centric Growth</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">Identifying friction points in the user journey and shipping experiments that convert.</p>
+</div>
+<div class="group">
+<span class="font-label font-bold text-primary mb-2 block">03</span>
+<h4 class="font-headline text-3xl font-bold mb-4 group-hover:text-primary transition-colors">Agile Shipping</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">Leading engineers and designers through rapid iteration cycles to deliver value early and often.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="text-center py-24">
+<h2 class="font-headline text-6xl md:text-8xl font-black tracking-tighter text-on-surface mb-12">
+                Let's ship something <br/>
+<span class="text-primary italic">impactful.</span>
+</h2>
+<div class="flex flex-col md:flex-row justify-center items-center gap-6">
+<a class="bg-primary text-on-primary px-12 py-6 rounded-full font-headline font-black text-lg tracking-tighter uppercase hover:opacity-90 transition-all shadow-xl shadow-primary/20" href="mailto:hello@curator.com">Hire Me</a>
+<p class="font-body text-on-surface-variant">or email at <span class="text-on-surface font-bold">pm@curator.com</span></p>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#fcf8ff] dark:bg-[#1a1a2b] w-full py-12 px-8 border-t border-[#e2e0f8]/10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="font-['Epilogue'] font-bold text-[#b60058] text-xl">
+                CURATOR
+            </div>
+<p class="font-['Inter'] text-sm leading-relaxed text-[#1a1a2b]/60 dark:text-[#e2e0f8]/60">
+                © 2024 Product Management &amp; Strategy. Built with Intent.
+            </p>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-sm text-[#1a1a2b]/60 dark:text-[#e2e0f8]/60 hover:text-[#fd8b00] transition-colors duration-200" href="#">Twitter/X</a>
+<a class="font-['Inter'] text-sm text-[#1a1a2b]/60 dark:text-[#e2e0f8]/60 hover:text-[#fd8b00] transition-colors duration-200" href="#">LinkedIn</a>
+<a class="font-['Inter'] text-sm text-[#1a1a2b]/60 dark:text-[#e2e0f8]/60 hover:text-[#fd8b00] transition-colors duration-200" href="#">Substack</a>
+</div>
+</div>
+</footer>
+</body></html>
