@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rize Farm Collection System - Yuliana Lubis Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: #1a1c1c; background-color: #f9f9f9; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .kinetic-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .kinetic-hover:hover { transform: scale(1.02); box-shadow: 0px 20px 40px rgba(171, 54, 0, 0.08); }
+        .glassmorphism { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+        .italic-orange { font-style: italic; color: #ab3600; }
+        .chip { background-color: #e8e8e8; border-radius: 9999px; padding: 0.5rem 1rem; font-size: 0.875rem; transition: all 0.3s ease; cursor: pointer; }
+        .chip:hover { background-color: #ab3600; color: #ffffff; }
+        .green-dot { display: inline-block; width: 8px; height: 8px; background-color: #4caf50; border-radius: 50%; margin-right: 8px; }
+        .orange-accent-border { border-left: 4px solid #ab3600; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24; }
+        .section-spacer { height: 3rem; }
+        .case-study-card { background-color: #ffffff; border-radius: 2rem; padding: 2rem 2.5rem; }
+        .decision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1rem 0; }
+        .decision-card { background-color: #f3f3f3; border-radius: 1rem; padding: 1.5rem; transition: all 0.3s ease; }
+        .decision-card.chosen { background-color: #e8f5e9; border-left: 4px solid #4caf50; }
+        .decision-card.rejected { opacity: 0.7; background-color: #f3f3f3; }
+        .subsection-bg { background-color: #f3f3f3; border-radius: 1rem; padding: 1.5rem; margin: 0.75rem 0; }
+        .nested-bg { background-color: #e7e8e8; border-radius: 1rem; padding: 1rem 1.25rem; margin: 0.5rem 0; }
+        .gradient-btn { background: linear-gradient(135deg, #ab3600 0%, #ff5f1f 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease; display: inline-block; border: none; cursor: pointer; }
+        .gradient-btn:hover { transform: scale(1.02); box-shadow: 0px 12px 24px rgba(171, 54, 0, 0.2); }
+        .product-gallery { display: grid; gap: 1rem; margin: 1.5rem 0; }
+        .product-gallery .gallery-item { border-radius: 1rem; overflow: hidden; background-color: #f3f3f3; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .product-gallery .gallery-item:hover { transform: scale(1.02); box-shadow: 0px 12px 24px rgba(171, 54, 0, 0.1); }
+        .product-gallery .gallery-item img { width: 100%; height: auto; object-fit: contain; display: block; }
+        .product-gallery .gallery-item .img-caption { padding: 0.75rem 1rem; font-size: 0.875rem; color: #5f5e5e; font-weight: 500; }
+        .timeline-step { position: relative; padding-left: 2.5rem; padding-bottom: 2rem; }
+        .timeline-step::before { content: ''; position: absolute; left: 0.65rem; top: 1.8rem; bottom: 0; width: 2px; background: #e2e2e2; }
+        .timeline-step:last-child::before { display: none; }
+        .timeline-dot { position: absolute; left: 0; top: 0.25rem; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: #fff0e6; border: 2px solid #ab3600; display: flex; align-items: center; justify-content: center; }
+        .timeline-dot span { font-size: 12px; }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "on-background": "#1a1c1c",
+                        "surface-container-low": "#f3f3f3",
+                        "surface": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#ab3600",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary": "#5f5e5e",
+                        "background": "#f9f9f9",
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface">
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glassmorphism px-8 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-primary font-semibold hover:opacity-80 transition">
+                <span class="material-symbols-outlined" style="font-size: 20px;">arrow_back</span>
+                Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <section class="pt-32 pb-12 px-8 max-w-7xl mx-auto">
+        <div class="mb-6 flex gap-2 flex-wrap">
+            <span class="chip">Rize Farm</span>
+            <span class="chip">Agritech</span>
+            <span class="chip">2024–Present</span>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold font-headline mb-4 leading-tight">
+            From Reactive to Proactive: Redesigning Collection for 9,000+ Farmers
+        </h1>
+        <p class="text-xl text-secondary max-w-3xl">
+            We used to find out about payment problems when it was already too late. I redesigned the collection system so we could see risk 190 days before payment is due — and act on it.
+        </p>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- CONTEXT -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">THE CONTEXT</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">How Rize works</h2>
+
+            <div class="subsection-bg">
+                <p class="font-semibold text-on-background mb-2">The business model</p>
+                <p class="text-secondary text-base leading-relaxed">Rize provides seeds and farming inputs to rice farmers on credit. Farmers don't pay upfront — they pay after harvest. The payment target is T+270 days (about 9 months after the planting season starts).</p>
+            </div>
+
+            <div class="subsection-bg">
+                <p class="font-semibold text-on-background mb-2">The north star metric</p>
+                <p class="text-secondary text-base leading-relaxed"><strong style="color: #ab3600; font-size: 1.25rem;">T+270 = 90% collection rate.</strong> This means: by 270 days after the season starts, we should have collected 90% of what farmers owe. This is the number that keeps the business alive.</p>
+            </div>
+
+            <div class="subsection-bg">
+                <p class="font-semibold text-on-background mb-2">The scale</p>
+                <p class="text-secondary text-base leading-relaxed">~9,000 farmers across Indonesia and Vietnam, managed by 41 agronomists. Each agronomist handles hundreds of farmers in their territory.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- THE PROBLEM -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">THE PROBLEM</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">We only found out when it was too late</h2>
+
+            <p class="text-secondary text-base leading-relaxed mb-4">The old collection process was completely reactive. Here's what that looked like:</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="subsection-bg">
+                    <span class="material-symbols-outlined text-primary mb-2" style="font-size: 28px;">calendar_month</span>
+                    <p class="font-semibold text-on-background mb-1">Day 1 to Day 119</p>
+                    <p class="text-secondary text-base">Seeds go out, farmer plants, crop grows. We have no visibility. No system to track what's happening in the field. We hope things go well.</p>
+                </div>
+                <div class="subsection-bg">
+                    <span class="material-symbols-outlined text-primary mb-2" style="font-size: 28px;">warning</span>
+                    <p class="font-semibold text-on-background mb-1">Day 120 — surprise</p>
+                    <p class="text-secondary text-base">Invoice is due. Now we discover: "Oh, this farmer's crop failed 2 months ago." Or: "This farmer replanted and harvest is delayed." Too late to restructure, too late to plan. The money is already lost.</p>
+                </div>
+            </div>
+
+            <div class="nested-bg orange-accent-border mt-4">
+                <p class="text-on-background text-base"><span class="italic-orange">The core problem:</span> We were managing collection like a billing system — send invoice, wait, hope. But farming isn't predictable. Crops fail, floods happen, pests attack. If you don't build a system that accounts for that reality, you'll always be surprised.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- THE INSIGHT -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">THE INSIGHT</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">DAP 80 — the earliest point where you can predict</h2>
+
+            <p class="text-secondary text-base leading-relaxed mb-4">At DAP 80 (80 Days After Planting), the rice crop is mature enough that an agronomist can estimate the harvest yield. This is roughly 190 days before payment is due.</p>
+
+            <div class="subsection-bg" style="text-align: center; padding: 2rem;">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                    <div class="text-center">
+                        <p class="font-headline text-3xl font-bold text-primary">DAP 80</p>
+                        <p class="text-secondary text-sm mt-1">Harvest prediction possible</p>
+                    </div>
+                    <span class="material-symbols-outlined text-primary" style="font-size: 32px;">arrow_forward</span>
+                    <div class="text-center">
+                        <p class="font-headline text-3xl font-bold" style="color: #5f5e5e;">190 days</p>
+                        <p class="text-secondary text-sm mt-1">Time to act</p>
+                    </div>
+                    <span class="material-symbols-outlined text-primary" style="font-size: 32px;">arrow_forward</span>
+                    <div class="text-center">
+                        <p class="font-headline text-3xl font-bold text-primary">T+270</p>
+                        <p class="text-secondary text-sm mt-1">Payment due</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nested-bg orange-accent-border mt-4">
+                <p class="text-on-background text-base"><span class="italic-orange">The shift:</span> Don't wait for the fire — smell the smoke. If we capture harvest information at DAP 80, we have 190 days to plan, restructure, or intervene. That's the difference between a write-off and a recovery.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- WHAT I BUILT -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">WHAT I BUILT</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">A 3-part early warning system</h2>
+
+            <!-- Part 1 -->
+            <div class="subsection-bg mb-4">
+                <div class="flex items-center gap-3 mb-3">
+                    <div style="background: #fff0e6; border: 2px solid #ab3600; border-radius: 50%; width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <span class="font-headline font-bold text-primary">1</span>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-on-background">Pre-harvest Meeting (DAP 80)</h3>
+                </div>
+                <p class="text-secondary text-base leading-relaxed mb-3">At DAP 80, the agronomist visits each farmer group for a pre-harvest meeting. They collect: estimated harvest date, expected yield, and payment commitment. This is the trigger — the moment we go from "hoping" to "knowing."</p>
+                <div class="nested-bg">
+                    <p class="text-on-background text-base"><span class="font-semibold">If everything is on track:</span> Farmer confirms harvest date and payment → goes into the happy path → we collect after harvest.</p>
+                </div>
+                <div class="nested-bg">
+                    <p class="text-on-background text-base"><span class="font-semibold">If there's a problem:</span> Replanting, failed harvest, flood, pest — the agronomist reports it immediately and proposes restructuring.</p>
+                </div>
+            </div>
+
+            <!-- Part 2 -->
+            <div class="subsection-bg mb-4">
+                <div class="flex items-center gap-3 mb-3">
+                    <div style="background: #fff0e6; border: 2px solid #ab3600; border-radius: 50%; width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <span class="font-headline font-bold text-primary">2</span>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-on-background">Agronomist App — Report & Restructure</h3>
+                </div>
+                <p class="text-secondary text-base leading-relaxed mb-3">When a farmer can't pay in full, the agronomist doesn't just flag it — they propose a restructuring plan directly from the app. The payment gets split into installment (installments) that the farmer can actually manage.</p>
+                <div class="nested-bg">
+                    <p class="text-on-background text-base"><span class="font-semibold">Why agronomists, not a central team?</span> Because the agronomist is the one who visited the field, saw the damaged crop, talked to the farmer. They have the context. Centralizing that decision would be slower and less accurate.</p>
+                </div>
+            </div>
+
+            <!-- Part 3 -->
+            <div class="subsection-bg">
+                <div class="flex items-center gap-3 mb-3">
+                    <div style="background: #fff0e6; border: 2px solid #ab3600; border-radius: 50%; width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <span class="font-headline font-bold text-primary">3</span>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-on-background">Cohortly Dashboard — Plan, Don't React</h3>
+                </div>
+                <p class="text-secondary text-base leading-relaxed mb-3">Territory Managers (leaders of agronomists) need to see the big picture. Cohortly is a planning dashboard that shows all farmer cohorts by month — which are on track, which are behind, and where to focus effort.</p>
+                <div class="nested-bg">
+                    <p class="text-on-background text-base"><span class="font-semibold">The key columns:</span> Paid %, Cohort Impact (how much this group affects the overall target), and milestone checkpoints at T+120, T+150, T+180 — so managers can spot problems long before T+270.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- PRODUCT GLIMPSES -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">PRODUCT GLIMPSES</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">The Cohortly Dashboard</h2>
+            <p class="text-secondary text-base leading-relaxed mb-4">Some data has been blurred for confidentiality.</p>
+
+            <div class="product-gallery" style="grid-template-columns: 1fr;">
+                <div class="gallery-item">
+                    <img src="cohortly-overview.jpeg" alt="Cohortly Dashboard — Collections Planning with cohort view and collection details">
+                    <div class="img-caption">Collections Planning — Cohort view showing collection progress by month, with drill-down to farmer group and individual farmer level.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="cohortly-detail.jpeg" alt="Cohortly Dashboard — Collection details with farmer groups expanded">
+                    <div class="img-caption">Collection Details — Farmer group expanded showing individual farmers, their paid %, cohort impact, reschedule count, and planned visit dates.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- EDGE CASES -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">EDGE CASES</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">What could go wrong</h2>
+
+            <div class="space-y-3">
+                <div class="subsection-bg">
+                    <p class="font-semibold text-on-background mb-1">What if the farmer lies about their harvest?</p>
+                    <p class="text-secondary text-base">The agronomist physically visits the field at DAP 80. They can see the crop condition. The pre-harvest meeting isn't a phone call — it's an on-site inspection with data collection.</p>
+                </div>
+                <div class="subsection-bg">
+                    <p class="font-semibold text-on-background mb-1">What if there's a natural disaster after DAP 80?</p>
+                    <p class="text-secondary text-base">The system handles this with the restructuring flow. The agronomist reports the new situation and proposes a new plan. The point isn't to predict everything perfectly — it's to have a system that can respond fast.</p>
+                </div>
+                <div class="subsection-bg">
+                    <p class="font-semibold text-on-background mb-1">What if a Territory Manager has too many at-risk farmers?</p>
+                    <p class="text-secondary text-base">That's exactly what Cohortly solves. The Cohort Impact column shows which farmer groups have the biggest effect on the overall target. The TM can prioritize visits to high-impact groups first instead of treating everyone equally.</p>
+                </div>
+                <div class="subsection-bg">
+                    <p class="font-semibold text-on-background mb-1">What if a farmer in installment stops paying?</p>
+                    <p class="text-secondary text-base">The dashboard tracks reschedule count per farmer. If someone keeps rescheduling, that's visible data — the TM can escalate or visit in person. The system makes problems visible, not invisible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- LEARNINGS -->
+    <section class="px-8 max-w-7xl mx-auto pb-12">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">WHAT I LEARNED</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">Build systems that see problems before they happen</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="nested-bg orange-accent-border">
+                    <p class="text-on-background text-base"><span class="font-semibold">Reactive systems cost more than proactive ones.</span> Every late discovery is a potential write-off. Building an early warning system is an investment, not a cost.</p>
+                </div>
+                <div class="nested-bg orange-accent-border">
+                    <p class="text-on-background text-base"><span class="font-semibold">Trust the field, not the spreadsheet.</span> The best data comes from the person standing in the rice field, not from someone in an office reading reports.</p>
+                </div>
+                <div class="nested-bg orange-accent-border">
+                    <p class="text-on-background text-base"><span class="font-semibold">Installments beat write-offs.</span> When someone can't pay 100%, don't write off 100%. Give them a way to pay 60%, 70%, 80% — that's recovery, not loss.</p>
+                </div>
+                <div class="nested-bg orange-accent-border">
+                    <p class="text-on-background text-base"><span class="font-semibold">Make risk visible.</span> The biggest risk isn't a farmer who can't pay — it's a farmer who can't pay and nobody knows about it until it's too late.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-8 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-secondary text-base">&copy; 2026 Yuliana Lubis</p>
+            <a href="index.html" class="gradient-btn text-sm">Back to Portfolio</a>
+        </div>
+    </footer>
+</body>
+</html>

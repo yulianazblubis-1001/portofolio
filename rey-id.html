@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rey.id Case Study - Yuliana Lubis Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1c1c;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .kinetic-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .kinetic-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 20px 40px rgba(171, 54, 0, 0.08);
+        }
+
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .gradient-orange {
+            background: linear-gradient(135deg, #ab3600 0%, #ff5f1f 100%);
+        }
+
+        .orange-shadow {
+            box-shadow: 0px 20px 40px rgba(171, 54, 0, 0.08);
+        }
+
+        .italic-orange {
+            font-style: italic;
+            color: #ab3600;
+        }
+
+        .chip {
+            background-color: #e8e8e8;
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .chip:hover {
+            background-color: #ab3600;
+            color: #ffffff;
+        }
+
+        .green-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #4caf50;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .orange-accent-border {
+            border-left: 4px solid #ab3600;
+        }
+
+        /* Material Symbols */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .section-spacer {
+            height: 3rem;
+        }
+
+        .case-study-card {
+            background-color: #ffffff;
+            border-radius: 2rem;
+            padding: 2rem 2.5rem;
+        }
+
+        .decision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .decision-card {
+            background-color: #f3f3f3;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .decision-card.chosen {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+
+        .decision-card.rejected {
+            opacity: 0.7;
+            background-color: #f3f3f3;
+        }
+
+        .subsection-bg {
+            background-color: #f3f3f3;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 0.75rem 0;
+        }
+
+        .nested-bg {
+            background-color: #e7e8e8;
+            border-radius: 1rem;
+            padding: 1rem 1.25rem;
+            margin: 0.5rem 0;
+        }
+
+        .gradient-btn {
+            background: linear-gradient(135deg, #ab3600 0%, #ff5f1f 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .gradient-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 12px 24px rgba(171, 54, 0, 0.2);
+        }
+
+        .gray-btn {
+            background-color: #e8e8e8;
+            color: #1a1c1c;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .gray-btn:hover {
+            background-color: #d0d0d0;
+            transform: scale(1.02);
+        }
+
+        .white-btn {
+            background-color: white;
+            color: #ab3600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .white-btn:hover {
+            background-color: #f3f3f3;
+            transform: scale(1.02);
+        }
+
+        .border-btn {
+            background-color: transparent;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid white;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .border-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.02);
+        }
+
+        .metric-card {
+            background-color: #ffffff;
+            border-radius: 2rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .metric-number {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: #ab3600;
+            line-height: 1;
+        }
+
+        .metric-label {
+            font-weight: 600;
+            color: #1a1c1c;
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .metric-desc {
+            color: #5f5e5e;
+            font-size: 0.875rem;
+            margin-top: 0.75rem;
+            line-height: 1.5;
+        }
+
+        /* Product Glimpse Gallery */
+        .product-gallery {
+            display: grid;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .product-gallery.desktop-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .product-gallery.mobile-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .product-gallery .gallery-item {
+            border-radius: 1rem;
+            overflow: hidden;
+            background-color: #f3f3f3;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-gallery .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 12px 24px rgba(171, 54, 0, 0.1);
+        }
+
+        .product-gallery .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            object-position: top left;
+            display: block;
+        }
+
+        .product-gallery .gallery-item .img-caption {
+            padding: 0.75rem 1rem;
+            font-size: 0.8rem;
+            color: #5f5e5e;
+            font-weight: 500;
+        }
+
+        .gallery-card-highlight {
+            border-radius: 1rem;
+            overflow: hidden;
+            background-color: #f3f3f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card-highlight:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-card-highlight img {
+            max-width: 320px;
+            width: 100%;
+            border-radius: 0.75rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        @media (max-width: 768px) {
+            .product-gallery.desktop-grid {
+                grid-template-columns: 1fr;
+            }
+            .product-gallery.mobile-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "on-background": "#1a1c1c",
+                        "surface-container-low": "#f3f3f3",
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-container": "#ff5f1f",
+                        "on-surface-variant": "#5b4138",
+                        "secondary-container": "#e2dfde",
+                        "primary": "#ab3600",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary": "#5f5e5e",
+                        "surface-container": "#eeeeee",
+                        "background": "#f9f9f9",
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface">
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glassmorphism px-8 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-primary font-semibold hover:opacity-80 transition">
+                <span class="material-symbols-outlined" style="font-size: 20px;">arrow_back</span>
+                Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <section class="pt-32 pb-12 px-8 max-w-7xl mx-auto">
+        <div class="mb-6 flex gap-2 flex-wrap">
+            <span class="chip">Rey.id</span>
+            <span class="chip">Insurtech</span>
+            <span class="chip">2021-2023</span>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold font-headline mb-4 leading-tight">
+            Building a Complete Claim Ecosystem from Scratch
+        </h1>
+        <p class="text-xl text-secondary max-w-3xl">
+            As PM, I owned the entire claim experience across both member-facing app and internal processing tools. Over 2+ years, I grew from PM to Senior PM, shipping 5 interconnected products that transformed how health insurance claims work in Indonesia.
+        </p>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- CONTEXT SECTION -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <div class="case-study-card orange-accent-border">
+            <h2 class="text-3xl font-bold font-headline mb-4">Context</h2>
+            <p class="text-lg text-secondary leading-relaxed mb-4">
+                Rey.id was a health insurtech startup disrupting Indonesia's insurance market. When I joined, the vision was clear: make health insurance seamless for members and profitable for the company.
+            </p>
+            <p class="text-lg text-secondary leading-relaxed">
+                I owned the entire claim experience—both what customers see (the mobile app) and what the internal team operates (the claims processing tool). This wasn't a bug; it was the secret. Over 2+ years, I grew from Product Manager to Senior PM, launching 5 products that together formed a complete claim ecosystem. My growth track was tied to the business growth: as we scaled, the tools I built needed to scale with us.
+            </p>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- THE PROBLEM SECTION -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold font-headline mb-6">The Problem</h2>
+
+        <div class="case-study-card orange-accent-border mb-6">
+            <h3 class="text-3xl font-bold font-headline mb-4">The Chicken-and-Egg Problem</h3>
+            <p class="text-lg text-secondary leading-relaxed mb-6">
+                Rey.id needed a large hospital network to attract members, but hospitals only wanted to partner with insurers who already had many customers. Catch-22.
+            </p>
+            <p class="text-lg font-semibold text-primary mb-4">Two interconnected sub-problems:</p>
+
+            <div class="subsection-bg mb-4">
+                <h4 class="font-bold text-lg mb-3">Member Side (The App)</h4>
+                <ul class="space-y-3">
+                    <li class="flex gap-3">
+                        <span style="color: #ab3600; font-weight: bold;">•</span>
+                        <span class="text-secondary">Pay upfront at hospital, wait days for reimbursement</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span style="color: #ab3600; font-weight: bold;">•</span>
+                        <span class="text-secondary">Separate menus for outpatient vs inpatient claims (members don't think in categories)</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span style="color: #ab3600; font-weight: bold;">•</span>
+                        <span class="text-secondary">Manual document uploads and slow claim processing</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="subsection-bg">
+                <h4 class="font-bold text-lg mb-3">Internal Side (The Claims Team)</h4>
+                <ul class="space-y-3">
+                    <li class="flex gap-3">
+                        <span style="color: #ab3600; font-weight: bold;">•</span>
+                        <span class="text-secondary"><strong>ReyCare team:</strong> ~5 claims per shift + 20 chats simultaneously</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span style="color: #ab3600; font-weight: bold;">•</span>
+                        <span class="text-secondary">One giant form with no workflow structure</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span style="color: #ab3600; font-weight: bold;">•</span>
+                        <span class="text-secondary">Slow processing = frustrated members = bad customer experience</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="case-study-card">
+            <p class="text-lg italic-orange font-semibold mb-2">Key Insight:</p>
+            <p class="text-lg text-secondary leading-relaxed">
+                What happens in the internal tool directly reflects in the member's app. A slow, error-prone claims process inside = a frustrated customer outside. You can't separate the two. I had to fix the engine before we could paint the car.
+            </p>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- KEY DECISION #1 -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold font-headline mb-6">Key Decision #1: How to Break the Chicken-and-Egg</h2>
+
+        <div class="case-study-card orange-accent-border mb-6">
+            <p class="text-lg text-secondary mb-6">Three options. Each with clear trade-offs.</p>
+
+            <div class="decision-grid">
+                <div class="decision-card rejected">
+                    <h4 class="font-bold text-lg mb-2">Wait for Hospital Partnerships</h4>
+                    <p class="text-base text-secondary mb-4">Hope big hospitals will sign with us before we have customers.</p>
+                    <div class="nested-bg">
+                        <p class="text-xs font-semibold text-secondary mb-2">Why rejected:</p>
+                        <p class="text-xs text-secondary">Too slow. Hospitals move at enterprise speed. We'd run out of runway.</p>
+                    </div>
+                </div>
+
+                <div class="decision-card rejected">
+                    <h4 class="font-bold text-lg mb-2">Reimbursement-Only Model</h4>
+                    <p class="text-base text-secondary mb-4">Let members pay upfront, process claims in the app.</p>
+                    <div class="nested-bg">
+                        <p class="text-xs font-semibold text-secondary mb-2">Why rejected:</p>
+                        <p class="text-xs text-secondary">Bad UX. "Pay now, maybe get money back later" isn't compelling.</p>
+                    </div>
+                </div>
+
+                <div class="decision-card chosen">
+                    <h4 class="font-bold text-lg mb-2">Own Claim Team + ReyCard</h4>
+                    <p class="text-base text-secondary mb-4">Build internal claim processing team. Issue debit card (ReyCard) so members never pay upfront.</p>
+                    <div class="nested-bg">
+                        <p class="text-xs font-semibold text-secondary mb-2">Why chosen:</p>
+                        <p class="text-xs text-secondary"><strong>Higher cost</strong> but broke the chicken-and-egg immediately. Speed became our competitive advantage. Members felt zero friction.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-lg text-secondary leading-relaxed mt-8">
+                <strong>Trade-off made:</strong> Higher unit economics in the short term, but buying time to scale. This decision rippled through everything else.
+            </p>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- KEY DECISION #2 -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold font-headline mb-6">Key Decision #2: What to Build First</h2>
+
+        <div class="case-study-card orange-accent-border mb-6">
+            <p class="text-lg text-secondary mb-6">Once we committed to owning the claim process, the question became: internal tools first, or member app first?</p>
+
+            <div class="decision-grid mb-6">
+                <div class="decision-card chosen">
+                    <h4 class="font-bold text-lg mb-2">Internal Tool First</h4>
+                    <p class="text-base text-secondary">Redesign the claims processing workflow for our team. Fix the engine before you paint the car.</p>
+                    <div class="nested-bg mt-4">
+                        <p class="text-xs font-semibold text-secondary mb-2">Why chosen:</p>
+                        <p class="text-xs text-secondary">Right answer was counterintuitive. Fix internal processes first, and the member experience improves automatically.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="font-bold text-lg mb-3">Design Principles for Internal Tool</h4>
+            <div class="subsection-bg mb-4">
+                <p class="text-base text-secondary mb-2"><strong>🎯 Clear & Transparent:</strong> Every field, every calculation, every decision visible. No hidden rules.</p>
+            </div>
+            <div class="subsection-bg mb-4">
+                <p class="text-base text-secondary mb-2"><strong>📊 Informatively Minimal:</strong> Show only what's needed at each step. Reduce cognitive load.</p>
+            </div>
+            <div class="subsection-bg">
+                <p class="text-base text-secondary mb-2"><strong>⚙️ Simple to Operate:</strong> Minimal keystrokes. Inline editing. Fast navigation. Aim for 15-min SLA.</p>
+            </div>
+
+            <p class="text-lg text-secondary leading-relaxed mt-8">
+                <strong>How we thought about it:</strong> HMW reduce cognitive load so our team can process claims faster AND reduce member anxiety by processing claims within SLA?
+            </p>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- THE ECOSYSTEM -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold font-headline mb-6">The Ecosystem I Built (5 Products)</h2>
+
+        <div class="case-study-card orange-accent-border">
+            <div class="subsection-bg mb-6">
+                <h4 class="font-bold text-lg mb-2">1. Claim Internal Tools (InTools)</h4>
+                <p class="text-secondary text-base leading-relaxed mb-3">
+                    Web app for ReyCare team. Redesigned the chaotic 6-phase claim process into 6 clean pages. PDF viewer, auto-mapped expense groups, inline-editable tables. Target SLA: 15 min per claim.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Pre-admission → Admission → Monitoring → Payment flow</li>
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Smart form auto-population from documents</li>
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Inline editing (no save button = faster workflow)</li>
+                </ul>
+            </div>
+
+            <div class="subsection-bg mb-6">
+                <h4 class="font-bold text-lg mb-2">2. ReyCard</h4>
+                <p class="text-secondary text-base leading-relaxed mb-3">
+                    Indonesia's first health insurtech debit card. Partnership with Bank Sampoerna & Xendit for payment processing. Card auth connects directly to claim assessment system.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Zero friction at hospital (no upfront payment required)</li>
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Claim assessed at point of transaction</li>
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Breaking the chicken-and-egg in one product</li>
+                </ul>
+            </div>
+
+            <div class="subsection-bg mb-6">
+                <h4 class="font-bold text-lg mb-2">3. Outpatient & Inpatient Menu (Mobile)</h4>
+                <p class="text-secondary text-base leading-relaxed mb-3">
+                    Merged what used to be two separate menus into one unified CRUD system. Members don't think in categories. Document upload, GPS tracking, QRIS payment integration.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Unified claim submission experience</li>
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Easy document upload with photo verification</li>
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Real-time claim status tracking</li>
+                </ul>
+            </div>
+
+            <div class="subsection-bg mb-6">
+                <h4 class="font-bold text-lg mb-2">4. Emergency Menu</h4>
+                <p class="text-secondary text-base leading-relaxed mb-3">
+                    911 for members. GPS-enabled ambulance dispatch, real-time chat & call with ReyCare team. Instant hospital referral.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Panic button for members in crisis</li>
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Geo-routing to nearest hospital</li>
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Pre-authorization while in transit</li>
+                </ul>
+            </div>
+
+            <div class="subsection-bg">
+                <h4 class="font-bold text-lg mb-2">5. ML Fraud Detection + e-KYC</h4>
+                <p class="text-secondary text-base leading-relaxed mb-3">
+                    Auto-flagging suspicious claims. Integration with VIDA (facial recognition) and OCR for document verification. Reduced fraud by 60%.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Real-time claim validation</li>
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Automated KYC via biometrics</li>
+                    <li class="flex gap-2 text-base text-secondary"><span style="color: #ab3600;">✓</span> Reduced manual review overhead</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- PRODUCT GLIMPSE: INTOOLS -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold font-headline mb-6">Product Glimpse — InTools (Internal Claims System)</h2>
+        <p class="text-lg text-secondary mb-8">
+            The redesigned claim processing workflow. Six pages, one workflow. Clear. Fast. Transparent.
+        </p>
+
+        <div class="product-gallery desktop-grid">
+            <div class="gallery-item">
+                <img src="intools-preadmission.png" alt="Pre-admission phase">
+                <div class="img-caption">Pre-admission</div>
+            </div>
+            <div class="gallery-item">
+                <img src="intools-admission.png" alt="Admission phase">
+                <div class="img-caption">Admission</div>
+            </div>
+            <div class="gallery-item">
+                <img src="intools-monitoring.png" alt="Monitoring phase">
+                <div class="img-caption">Monitoring</div>
+            </div>
+            <div class="gallery-item">
+                <img src="intools-payment.png" alt="Payment phase">
+                <div class="img-caption">Payment</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- PRODUCT GLIMPSE: MEMBER APP & REYCARD -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold font-headline mb-6">Product Glimpse — Member App & ReyCard</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div>
+                <p class="text-lg text-secondary mb-6">Mobile app flows: claim submission, outpatient, and inpatient menus.</p>
+                <div class="product-gallery mobile-grid">
+                    <div class="gallery-item">
+                        <img src="reyid-mobile-app.jpeg" alt="Main menu">
+                        <div class="img-caption">Main Menu</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="reyid-outpatient.jpeg" alt="Outpatient">
+                        <div class="img-caption">Outpatient</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="reyid-inpatient.jpeg" alt="Inpatient">
+                        <div class="img-caption">Inpatient</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2">
+                <p class="text-lg text-secondary mb-6">ReyCard: Indonesia's first health insurtech debit card. Zero friction at hospital checkout.</p>
+                <div class="gallery-card-highlight" style="height: 320px;">
+                    <img src="reycard-blurred.jpeg" alt="ReyCard">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- KEY DECISION #3 -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold font-headline mb-6">Key Decision #3: Merging Outpatient & Inpatient</h2>
+
+        <div class="case-study-card orange-accent-border">
+            <p class="text-lg text-secondary mb-8">
+                Members submitted claims for outpatient and inpatient separately. Two menus. Two forms. But members don't think in categories—they just think "I got sick, I need to claim."
+            </p>
+
+            <div class="decision-grid mb-8">
+                <div class="decision-card rejected">
+                    <h4 class="font-bold text-lg mb-2">Keep Separate</h4>
+                    <p class="text-base text-secondary mb-4">Maintain distinct outpatient vs inpatient flows.</p>
+                    <div class="nested-bg">
+                        <p class="text-xs font-semibold text-secondary mb-2">Why rejected:</p>
+                        <p class="text-xs text-secondary">Members are forced to choose a category they don't understand. More friction. More support queries.</p>
+                    </div>
+                </div>
+
+                <div class="decision-card chosen">
+                    <h4 class="font-bold text-lg mb-2">Merge into One CRUD System</h4>
+                    <p class="text-base text-secondary mb-4">One claim form. Smart routing based on claim type.</p>
+                    <div class="nested-bg">
+                        <p class="text-xs font-semibold text-secondary mb-2">Why chosen:</p>
+                        <p class="text-xs text-secondary"><strong>Higher upfront cost</strong> to rebuild, but simpler mental model. Members get it immediately. Support tickets dropped by 40%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-lg text-secondary leading-relaxed">
+                <strong>Impact:</strong> We reduced decision fatigue at a critical moment—when members need help most. That's product thinking: solve for how people actually behave, not how systems are organized.
+            </p>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- RESULTS SECTION -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold font-headline mb-6">Results</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div class="metric-card kinetic-hover">
+                <div class="metric-number">50%</div>
+                <div class="metric-label">Faster Claim Processing</div>
+                <div class="metric-desc">From 2 hours to 60 minutes average</div>
+            </div>
+
+            <div class="metric-card kinetic-hover">
+                <div class="metric-number">+30%</div>
+                <div class="metric-label">CSAT Improvement</div>
+                <div class="metric-desc">Member satisfaction on claim experience</div>
+            </div>
+
+            <div class="metric-card kinetic-hover">
+                <div class="metric-number">-60%</div>
+                <div class="metric-label">Fraud Reduction</div>
+                <div class="metric-desc">Via ML detection + biometric verification</div>
+            </div>
+
+            <div class="metric-card kinetic-hover">
+                <div class="metric-number">+20%</div>
+                <div class="metric-label">Market Share Growth</div>
+                <div class="metric-desc">New customer acquisition + retention</div>
+            </div>
+
+            <div class="metric-card kinetic-hover">
+                <div class="metric-number">+80%</div>
+                <div class="metric-label">Team Productivity</div>
+                <div class="metric-desc">ReyCare team handled 5x more claims/shift</div>
+            </div>
+
+            <div class="metric-card kinetic-hover">
+                <div class="metric-number">+20%</div>
+                <div class="metric-label">Sales Conversion</div>
+                <div class="metric-desc">Hospitals said yes faster—less friction</div>
+            </div>
+        </div>
+
+        <div class="case-study-card">
+            <p class="text-lg text-secondary leading-relaxed">
+                These numbers tell a story: internal tool improvements don't just help the team—they ripple through every metric that matters to the business. Faster processing = happier members = better retention = easier hospital partnerships.
+            </p>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- EDGE CASES SECTION -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold font-headline mb-6">Edge Cases: When Things Don't Work</h2>
+
+        <div class="case-study-card orange-accent-border">
+            <p class="text-lg text-secondary mb-8">
+                Real product work isn't about the happy path. It's about handling the messy edge cases that make or break trust.
+            </p>
+
+            <div class="subsection-bg mb-6">
+                <h4 class="font-bold text-lg mb-3">🏥 "Card Declined at Hospital"</h4>
+                <p class="text-secondary mb-3">
+                    What if the member tries to use ReyCard and it gets declined? Panic. Embarrassment. At a hospital.
+                </p>
+                <div class="nested-bg">
+                    <p class="text-base text-secondary mb-2"><strong>Solution:</strong> Instant QRIS fallback. Hospital scans QR code instead. Claim flagged for immediate ReyCare review. Member gets SMS: "Your claim is being processed. You'll pay nothing if approved."</p>
+                </div>
+            </div>
+
+            <div class="subsection-bg">
+                <h4 class="font-bold text-lg mb-3">🔍 "Monitoring Phase Complexity"</h4>
+                <p class="text-secondary mb-3">
+                    Some claims span multiple days with multiple encounters. The monitoring phase can become a nightmare—claims agents manually calculating totals, introducing errors.
+                </p>
+                <div class="nested-bg">
+                    <p class="text-base text-secondary mb-2"><strong>Solution:</strong> Auto-calculation tables in InTools. Rows update in real-time. Agents can't make math errors if math is automatic. Result: 40% fewer calculation mistakes. More claim approvals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- LEARNINGS SECTION -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold font-headline mb-6">What I Learned</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="case-study-card orange-accent-border kinetic-hover">
+                <h3 class="text-xl font-bold font-headline mb-3">Think in Systems, Not Features</h3>
+                <p class="text-secondary leading-relaxed">
+                    A feature is a single thing. A system is how everything connects. Claim processing isn't one product—it's 5 products talking to each other. Understanding the whole > nailing one part.
+                </p>
+            </div>
+
+            <div class="case-study-card orange-accent-border kinetic-hover">
+                <h3 class="text-xl font-bold font-headline mb-3">Internal Tools Need Advocacy</h3>
+                <p class="text-secondary leading-relaxed">
+                    Nobody glamorizes an internal tool. But it's where the magic happens. I had to fight to protect time for the claims team's experience. That was the leverage point for everything else.
+                </p>
+            </div>
+
+            <div class="case-study-card orange-accent-border kinetic-hover">
+                <h3 class="text-xl font-bold font-headline mb-3">Medical Domains Have Hidden Rules</h3>
+                <p class="text-secondary leading-relaxed">
+                    You can't guess how claims work. You need to sit with doctors, nurses, and claims agents. Understand the workflows. Don't apply generic product logic—respect domain expertise.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- CTA SECTION -->
+    <section class="px-8 max-w-7xl mx-auto pb-20">
+        <div class="case-study-card text-center">
+            <h3 class="text-3xl font-bold font-headline mb-4">Interested in discussing product strategy?</h3>
+            <p class="text-lg text-secondary mb-6">I'm always happy to share lessons from building systems at scale.</p>
+            <a href="index.html" class="gradient-btn">
+                Back to Portfolio
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>

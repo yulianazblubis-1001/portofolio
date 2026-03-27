@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Online Zeepos - Yuliana Lubis Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: #1a1c1c; background-color: #f9f9f9; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .kinetic-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .kinetic-hover:hover { transform: scale(1.02); box-shadow: 0px 20px 40px rgba(171, 54, 0, 0.08); }
+        .glassmorphism { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+        .gradient-orange { background: linear-gradient(135deg, #ab3600 0%, #ff5f1f 100%); }
+        .orange-shadow { box-shadow: 0px 20px 40px rgba(171, 54, 0, 0.08); }
+        .italic-orange { font-style: italic; color: #ab3600; }
+        .chip { background-color: #e8e8e8; border-radius: 9999px; padding: 0.5rem 1rem; font-size: 0.875rem; transition: all 0.3s ease; cursor: pointer; }
+        .chip:hover { background-color: #ab3600; color: #ffffff; }
+        .green-dot { display: inline-block; width: 8px; height: 8px; background-color: #4caf50; border-radius: 50%; margin-right: 8px; }
+        .orange-accent-border { border-left: 4px solid #ab3600; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24; }
+        .section-spacer { height: 3rem; }
+        .case-study-card { background-color: #ffffff; border-radius: 2rem; padding: 2rem 2.5rem; }
+        .decision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0; }
+        .decision-card { background-color: #f3f3f3; border-radius: 1rem; padding: 1.5rem; transition: all 0.3s ease; }
+        .decision-card.chosen { background-color: #e8f5e9; border-left: 4px solid #4caf50; }
+        .decision-card.rejected { opacity: 0.7; background-color: #f3f3f3; }
+        .subsection-bg { background-color: #f3f3f3; border-radius: 1rem; padding: 1.5rem; margin: 0.75rem 0; }
+        .nested-bg { background-color: #e7e8e8; border-radius: 1rem; padding: 1rem 1.25rem; margin: 0.5rem 0; }
+        .gradient-btn { background: linear-gradient(135deg, #ab3600 0%, #ff5f1f 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease; display: inline-block; border: none; cursor: pointer; }
+        .gradient-btn:hover { transform: scale(1.02); box-shadow: 0px 12px 24px rgba(171, 54, 0, 0.2); }
+        .metric-card { background-color: #ffffff; border-radius: 2rem; padding: 1.5rem; text-align: center; }
+        .metric-number { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 3rem; font-weight: 800; color: #ab3600; line-height: 1; }
+        .metric-label { font-weight: 600; color: #1a1c1c; margin-top: 0.5rem; font-size: 1rem; }
+        .metric-desc { color: #5f5e5e; font-size: 0.875rem; margin-top: 0.75rem; line-height: 1.5; }
+        .product-gallery { display: grid; gap: 1rem; margin: 1.5rem 0; }
+        .product-gallery.mobile-grid { grid-template-columns: repeat(2, 1fr); }
+        .product-gallery .gallery-item { border-radius: 1rem; overflow: hidden; background-color: #f3f3f3; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .product-gallery .gallery-item:hover { transform: scale(1.02); box-shadow: 0px 12px 24px rgba(171, 54, 0, 0.1); }
+        .product-gallery .gallery-item img { width: 100%; height: 480px; object-fit: contain; display: block; background: #f9f9f9; padding: 1rem; }
+        .product-gallery .gallery-item .img-caption { padding: 0.75rem 1rem; font-size: 0.8rem; color: #5f5e5e; font-weight: 500; }
+        @media (max-width: 768px) {
+            .product-gallery.mobile-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "on-background": "#1a1c1c",
+                        "surface-container-low": "#f3f3f3",
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-container": "#ff5f1f",
+                        "on-surface-variant": "#5b4138",
+                        "secondary-container": "#e2dfde",
+                        "primary": "#ab3600",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary": "#5f5e5e",
+                        "surface-container": "#eeeeee",
+                        "background": "#f9f9f9",
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface">
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glassmorphism px-8 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-primary font-semibold hover:opacity-80 transition">
+                <span class="material-symbols-outlined" style="font-size: 20px;">arrow_back</span>
+                Back to Portfolio
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <section class="pt-32 pb-12 px-8 max-w-7xl mx-auto">
+        <div class="mb-6 flex gap-2 flex-wrap">
+            <span class="chip">Bapenda (Local Tax Gov)</span>
+            <span class="chip">GovTech</span>
+            <span class="chip">2021</span>
+            <span class="chip" style="background-color: #fff0e6; color: #ab3600;">Career Pivot: PM → Product Manager</span>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold font-headline mb-4 leading-tight">
+            A POS That Feels Like a Calculator
+        </h1>
+        <p class="text-xl text-secondary max-w-3xl">
+            This project changed my career. As a Project Manager, I was managing timelines and resources. But when the existing POS kept failing at small restaurants, I stopped managing the project and started owning the product — questioning <em>what</em> we're building, not just <em>when</em>. That shift made me a Product Manager.
+        </p>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- CONTEXT -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">THE CONTEXT</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">Why this project existed</h2>
+
+            <div class="subsection-bg">
+                <p class="font-semibold text-on-background mb-2">The stakeholder</p>
+                <p class="text-secondary text-base leading-relaxed">Bapenda — the local tax revenue office. They needed visibility into small restaurant transactions to track tax compliance. But they had zero data because most small restaurants (warung, rumah makan) didn't use any digital system.</p>
+            </div>
+
+            <div class="subsection-bg">
+                <p class="font-semibold text-on-background mb-2">My role (and the pivot)</p>
+                <p class="text-secondary text-base leading-relaxed">I started as a <strong>Project Manager</strong> — coordinating timelines, managing the dev team, making sure things shipped on time. But when I saw the POS kept failing, I didn't just escalate the problem — I went to the restaurants, talked to the cashiers, and came back with a completely different product idea. That was the moment I became a <strong>Product Manager</strong>. I owned the product from user research to release, working with 1 mobile developer to ship a working Android app.</p>
+            </div>
+
+            <div class="nested-bg orange-accent-border">
+                <p class="text-on-background text-base"><span class="italic-orange">The career shift:</span> Project Management asks "how do we deliver this on time?" Product Management asks "should we even build this?" KOZ was the first time I asked the second question — and it changed everything.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- THE PROBLEM -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">THE PROBLEM</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">Why normal POS didn't work here</h2>
+
+            <p class="text-secondary text-base leading-relaxed mb-4">We tried giving restaurants a standard POS before. It failed. Here's why:</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="subsection-bg">
+                    <span class="material-symbols-outlined text-primary mb-2" style="font-size: 28px;">school</span>
+                    <p class="font-semibold text-on-background mb-1">Cashiers have high school diploma</p>
+                    <p class="text-secondary text-base">Most cashiers are young, with basic education. A POS with many menus, categories, and settings confused them. Training took time they didn't have.</p>
+                </div>
+                <div class="subsection-bg">
+                    <span class="material-symbols-outlined text-primary mb-2" style="font-size: 28px;">sync_problem</span>
+                    <p class="font-semibold text-on-background mb-1">High turnover = retraining forever</p>
+                    <p class="text-secondary text-base">Cashiers change every few months. Every new person needed new training. The restaurant owner got tired of it and just stopped using the POS.</p>
+                </div>
+                <div class="subsection-bg">
+                    <span class="material-symbols-outlined text-primary mb-2" style="font-size: 28px;">wifi_off</span>
+                    <p class="font-semibold text-on-background mb-1">Internet = extra cost</p>
+                    <p class="text-secondary text-base">The POS needed internet to sync. For small warung owners, internet is an added cost they don't want to pay. So they just turned the machine off.</p>
+                </div>
+            </div>
+
+            <div class="nested-bg orange-accent-border mt-4">
+                <p class="text-on-background text-base"><span class="italic-orange">The real insight:</span> The problem wasn't the cashier or the restaurant. The problem was the product. It was built for modern retail, not for a warung with 5 menu items and Rp 5.000 nasi goreng.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- KEY DECISION -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">THE KEY DECISION</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">Make it feel like a calculator, not a POS</h2>
+
+            <p class="text-secondary text-base leading-relaxed mb-4">Instead of simplifying a POS, I flipped the question: what do all cashiers already know how to use? A calculator. Everyone — from a high school student to a 50-year-old warung owner — can use a calculator. So I proposed: let's make the app look and work like one.</p>
+
+            <div class="decision-grid">
+                <div class="decision-card rejected">
+                    <p class="font-semibold text-on-background mb-2">Option A: Simplify existing POS</p>
+                    <p class="text-secondary text-base mb-2">Remove features, reduce menus, make it "simpler."</p>
+                    <div class="nested-bg">
+                        <p class="text-secondary text-sm"><span class="font-semibold text-on-background">Why not:</span> Even a "simple" POS still has product catalog, categories, discounts, settings. The mental model is still foreign to the cashier. Training still needed.</p>
+                    </div>
+                </div>
+                <div class="decision-card chosen">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="green-dot"></span>
+                        <p class="font-semibold text-on-background">Option B: Calculator-style app</p>
+                    </div>
+                    <p class="text-secondary text-base mb-2">Just numbers. Type the amount, hit submit. That's it.</p>
+                    <div class="nested-bg">
+                        <p class="text-secondary text-sm"><span class="font-semibold text-on-background">Why this:</span> Zero training needed. Every cashier already knows the interface. No product catalog to maintain. No internet required for basic use. Bapenda gets the transaction data they need.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection-bg mt-4">
+                <p class="font-semibold text-on-background mb-2">The trade-off I accepted</p>
+                <p class="text-secondary text-base leading-relaxed">We lose itemized data (no "2x nasi goreng, 1x es teh"). We only get the total transaction amount. But for Bapenda's purpose — tracking revenue per restaurant — that's enough. Getting 80% of the data from 100% of restaurants is better than getting 100% of data from 10% of restaurants that actually use a full POS.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- HOW IT WORKS -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">HOW IT WORKS</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">Two screens. That's the whole app.</h2>
+
+            <div class="product-gallery mobile-grid">
+                <div class="gallery-item">
+                    <img src="zeepos-order.png" alt="Kalkulator Online Zeepos - Order Screen">
+                    <div class="img-caption">Order screen — just a calculator. Type the amount, hit Submit.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="zeepos-history.png" alt="Kalkulator Online Zeepos - History Screen">
+                    <div class="img-caption">History screen — all transactions logged with date, time, and amount.</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div class="subsection-bg">
+                    <span class="material-symbols-outlined text-primary mb-2" style="font-size: 24px;">touch_app</span>
+                    <p class="font-semibold text-on-background mb-1">For the cashier</p>
+                    <p class="text-secondary text-base">Customer pays Rp 25.000? Type 25000, hit Submit. Done. No menu to scroll, no category to pick. New cashier? Hand them the phone, they figure it out in 10 seconds.</p>
+                </div>
+                <div class="subsection-bg">
+                    <span class="material-symbols-outlined text-primary mb-2" style="font-size: 24px;">monitoring</span>
+                    <p class="font-semibold text-on-background mb-1">For Bapenda</p>
+                    <p class="text-secondary text-base">Every transaction syncs to a dashboard. They can see daily revenue per restaurant, spot trends, and flag businesses that might be underreporting. All without visiting the restaurant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- EDGE CASES -->
+    <section class="px-8 max-w-7xl mx-auto">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">EDGE CASES I HANDLED</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">Things that could go wrong</h2>
+
+            <div class="space-y-3">
+                <div class="subsection-bg">
+                    <p class="font-semibold text-on-background mb-1">What if the cashier types the wrong amount?</p>
+                    <p class="text-secondary text-base">The history screen shows all transactions. The owner or cashier can review at end of day. We kept it simple — no edit, no delete — to prevent data manipulation (which Bapenda cares about).</p>
+                </div>
+                <div class="subsection-bg">
+                    <p class="font-semibold text-on-background mb-1">What if there's no internet?</p>
+                    <p class="text-secondary text-base">Transactions save locally first, then sync when connection is available. The cashier never notices — the app works the same offline or online.</p>
+                </div>
+                <div class="subsection-bg">
+                    <p class="font-semibold text-on-background mb-1">What if the owner doesn't want to use it?</p>
+                    <p class="text-secondary text-base">This was a Bapenda mandate, so there was some push. But the fact that it's "just a calculator" lowered resistance. Owners didn't feel like they were learning a new system — they were just recording sales like they already do on paper, but digitally.</p>
+                </div>
+                <div class="subsection-bg">
+                    <p class="font-semibold text-on-background mb-1">What about restaurants that want a full POS?</p>
+                    <p class="text-secondary text-base">They can still use their own POS. Zeepos is for the ones that don't have anything. It fills the gap, not replaces existing systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- LEARNINGS -->
+    <section class="px-8 max-w-7xl mx-auto pb-12">
+        <div class="case-study-card">
+            <p class="font-headline text-primary font-bold text-base mb-3">WHAT I LEARNED</p>
+            <h2 class="font-headline text-3xl font-bold text-on-background mb-4">The best product is the one people actually use</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="nested-bg orange-accent-border">
+                    <p class="text-on-background text-base"><span class="font-semibold">Don't simplify — reframe.</span> Making a POS simpler still means a POS. Changing the mental model to "calculator" removed the learning curve entirely.</p>
+                </div>
+                <div class="nested-bg orange-accent-border">
+                    <p class="text-on-background text-base"><span class="font-semibold">80% data from everyone > 100% data from few.</span> Accepting imperfect data was the right trade-off. Coverage mattered more than granularity for Bapenda.</p>
+                </div>
+                <div class="nested-bg orange-accent-border">
+                    <p class="text-on-background text-base"><span class="font-semibold">Context is everything.</span> A product built for Jakarta's cafe culture won't work in a roadside warung. You have to meet users where they are.</p>
+                </div>
+                <div class="nested-bg orange-accent-border">
+                    <p class="text-on-background text-base"><span class="font-semibold">Constraints force creativity.</span> No internet, low education, high turnover — these weren't blockers, they were the brief.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-8 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-secondary text-base">&copy; 2026 Yuliana Lubis</p>
+            <a href="index.html" class="gradient-btn text-sm">Back to Portfolio</a>
+        </div>
+    </footer>
+</body>
+</html>
